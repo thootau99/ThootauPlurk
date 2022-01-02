@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672620278151C700009C34 /* ThootauPlurkApp.swift */; };
+		F8672623278151C700009C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672622278151C700009C34 /* ContentView.swift */; };
+		F8672625278151C900009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672624278151C900009C34 /* Assets.xcassets */; };
+		F8672628278151C900009C34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672627278151C900009C34 /* Preview Assets.xcassets */; };
+		F8672632278151C900009C34 /* ThootauPlurkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672631278151C900009C34 /* ThootauPlurkTests.swift */; };
+		F867263C278151C900009C34 /* ThootauPlurkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F867263B278151C900009C34 /* ThootauPlurkUITests.swift */; };
+		F867263E278151C900009C34 /* ThootauPlurkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F867263D278151C900009C34 /* ThootauPlurkUITestsLaunchTests.swift */; };
+		F8672642278151C900009C34 /* ThootauPlurk WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8672641278151C900009C34 /* ThootauPlurk WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8672647278151CA00009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672646278151CA00009C34 /* Assets.xcassets */; };
+		F867264D278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8672652278151CA00009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672651278151CA00009C34 /* ThootauPlurkApp.swift */; };
+		F8672654278151CA00009C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672653278151CA00009C34 /* ContentView.swift */; };
+		F8672656278151CA00009C34 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672655278151CA00009C34 /* NotificationController.swift */; };
+		F8672658278151CA00009C34 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672657278151CA00009C34 /* NotificationView.swift */; };
+		F867265A278151CA00009C34 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672659278151CA00009C34 /* ComplicationController.swift */; };
+		F867265C278151CC00009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F867265B278151CC00009C34 /* Assets.xcassets */; };
+		F867265F278151CC00009C34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F867265E278151CC00009C34 /* Preview Assets.xcassets */; };
+		F867266B278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F867266A278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift */; };
+		F8672675278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */; };
+		F8672677278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F867262E278151C900009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F867261C278151C700009C34;
+			remoteInfo = ThootauPlurk;
+		};
+		F8672638278151C900009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F867261C278151C700009C34;
+			remoteInfo = ThootauPlurk;
+		};
+		F8672643278151C900009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8672640278151C900009C34;
+			remoteInfo = "ThootauPlurk WatchKit App";
+		};
+		F867264E278151CA00009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F867264B278151CA00009C34;
+			remoteInfo = "ThootauPlurk WatchKit Extension";
+		};
+		F8672667278151CC00009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F867264B278151CA00009C34;
+			remoteInfo = "ThootauPlurk WatchKit Extension";
+		};
+		F8672671278151CC00009C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8672615278151C700009C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8672640278151C900009C34;
+			remoteInfo = "ThootauPlurk WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F867267D278151CC00009C34 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F867264D278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672681278151CC00009C34 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F8672642278151C900009C34 /* ThootauPlurk WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F867261D278151C700009C34 /* ThootauPlurk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThootauPlurk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8672620278151C700009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
+		F8672622278151C700009C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8672624278151C900009C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8672627278151C900009C34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F867262D278151C900009C34 /* ThootauPlurkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThootauPlurkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8672631278151C900009C34 /* ThootauPlurkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkTests.swift; sourceTree = "<group>"; };
+		F8672637278151C900009C34 /* ThootauPlurkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThootauPlurkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F867263B278151C900009C34 /* ThootauPlurkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkUITests.swift; sourceTree = "<group>"; };
+		F867263D278151C900009C34 /* ThootauPlurkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8672641278151C900009C34 /* ThootauPlurk WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ThootauPlurk WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8672646278151CA00009C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ThootauPlurk WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8672651278151CA00009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
+		F8672653278151CA00009C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8672655278151CA00009C34 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F8672657278151CA00009C34 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		F8672659278151CA00009C34 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F867265B278151CC00009C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F867265E278151CC00009C34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8672660278151CC00009C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8672661278151CC00009C34 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F8672666278151CC00009C34 /* ThootauPlurk WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ThootauPlurk WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F867266A278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		F8672670278151CC00009C34 /* ThootauPlurk WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ThootauPlurk WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F867261A278151C700009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867262A278151C900009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672634278151C900009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672649278151CA00009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672663278151CC00009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867266D278151CC00009C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8672614278151C700009C34 = {
+			isa = PBXGroup;
+			children = (
+				F867261F278151C700009C34 /* ThootauPlurk */,
+				F8672630278151C900009C34 /* ThootauPlurkTests */,
+				F867263A278151C900009C34 /* ThootauPlurkUITests */,
+				F8672645278151C900009C34 /* ThootauPlurk WatchKit App */,
+				F8672650278151CA00009C34 /* ThootauPlurk WatchKit Extension */,
+				F8672669278151CC00009C34 /* ThootauPlurk WatchKit AppTests */,
+				F8672673278151CC00009C34 /* ThootauPlurk WatchKit AppUITests */,
+				F867261E278151C700009C34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F867261E278151C700009C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F867261D278151C700009C34 /* ThootauPlurk.app */,
+				F867262D278151C900009C34 /* ThootauPlurkTests.xctest */,
+				F8672637278151C900009C34 /* ThootauPlurkUITests.xctest */,
+				F8672641278151C900009C34 /* ThootauPlurk WatchKit App.app */,
+				F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */,
+				F8672666278151CC00009C34 /* ThootauPlurk WatchKit AppTests.xctest */,
+				F8672670278151CC00009C34 /* ThootauPlurk WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F867261F278151C700009C34 /* ThootauPlurk */ = {
+			isa = PBXGroup;
+			children = (
+				F8672620278151C700009C34 /* ThootauPlurkApp.swift */,
+				F8672622278151C700009C34 /* ContentView.swift */,
+				F8672624278151C900009C34 /* Assets.xcassets */,
+				F8672626278151C900009C34 /* Preview Content */,
+			);
+			path = ThootauPlurk;
+			sourceTree = "<group>";
+		};
+		F8672626278151C900009C34 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F8672627278151C900009C34 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8672630278151C900009C34 /* ThootauPlurkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8672631278151C900009C34 /* ThootauPlurkTests.swift */,
+			);
+			path = ThootauPlurkTests;
+			sourceTree = "<group>";
+		};
+		F867263A278151C900009C34 /* ThootauPlurkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F867263B278151C900009C34 /* ThootauPlurkUITests.swift */,
+				F867263D278151C900009C34 /* ThootauPlurkUITestsLaunchTests.swift */,
+			);
+			path = ThootauPlurkUITests;
+			sourceTree = "<group>";
+		};
+		F8672645278151C900009C34 /* ThootauPlurk WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F8672646278151CA00009C34 /* Assets.xcassets */,
+			);
+			path = "ThootauPlurk WatchKit App";
+			sourceTree = "<group>";
+		};
+		F8672650278151CA00009C34 /* ThootauPlurk WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F8672651278151CA00009C34 /* ThootauPlurkApp.swift */,
+				F8672653278151CA00009C34 /* ContentView.swift */,
+				F8672655278151CA00009C34 /* NotificationController.swift */,
+				F8672657278151CA00009C34 /* NotificationView.swift */,
+				F8672659278151CA00009C34 /* ComplicationController.swift */,
+				F867265B278151CC00009C34 /* Assets.xcassets */,
+				F8672660278151CC00009C34 /* Info.plist */,
+				F8672661278151CC00009C34 /* PushNotificationPayload.apns */,
+				F867265D278151CC00009C34 /* Preview Content */,
+			);
+			path = "ThootauPlurk WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F867265D278151CC00009C34 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F867265E278151CC00009C34 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8672669278151CC00009C34 /* ThootauPlurk WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F867266A278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift */,
+			);
+			path = "ThootauPlurk WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		F8672673278151CC00009C34 /* ThootauPlurk WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */,
+				F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */,
+			);
+			path = "ThootauPlurk WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F867261C278151C700009C34 /* ThootauPlurk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8672682278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk" */;
+			buildPhases = (
+				F8672619278151C700009C34 /* Sources */,
+				F867261A278151C700009C34 /* Frameworks */,
+				F867261B278151C700009C34 /* Resources */,
+				F8672681278151CC00009C34 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8672644278151C900009C34 /* PBXTargetDependency */,
+			);
+			name = ThootauPlurk;
+			productName = ThootauPlurk;
+			productReference = F867261D278151C700009C34 /* ThootauPlurk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F867262C278151C900009C34 /* ThootauPlurkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8672685278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurkTests" */;
+			buildPhases = (
+				F8672629278151C900009C34 /* Sources */,
+				F867262A278151C900009C34 /* Frameworks */,
+				F867262B278151C900009C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F867262F278151C900009C34 /* PBXTargetDependency */,
+			);
+			name = ThootauPlurkTests;
+			productName = ThootauPlurkTests;
+			productReference = F867262D278151C900009C34 /* ThootauPlurkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8672636278151C900009C34 /* ThootauPlurkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8672688278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurkUITests" */;
+			buildPhases = (
+				F8672633278151C900009C34 /* Sources */,
+				F8672634278151C900009C34 /* Frameworks */,
+				F8672635278151C900009C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8672639278151C900009C34 /* PBXTargetDependency */,
+			);
+			name = ThootauPlurkUITests;
+			productName = ThootauPlurkUITests;
+			productReference = F8672637278151C900009C34 /* ThootauPlurkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F8672640278151C900009C34 /* ThootauPlurk WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F867267E278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit App" */;
+			buildPhases = (
+				F867263F278151C900009C34 /* Resources */,
+				F867267D278151CC00009C34 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F867264F278151CA00009C34 /* PBXTargetDependency */,
+			);
+			name = "ThootauPlurk WatchKit App";
+			productName = "ThootauPlurk WatchKit App";
+			productReference = F8672641278151C900009C34 /* ThootauPlurk WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F867264B278151CA00009C34 /* ThootauPlurk WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F867267A278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit Extension" */;
+			buildPhases = (
+				F8672648278151CA00009C34 /* Sources */,
+				F8672649278151CA00009C34 /* Frameworks */,
+				F867264A278151CA00009C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ThootauPlurk WatchKit Extension";
+			productName = "ThootauPlurk WatchKit Extension";
+			productReference = F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		F8672665278151CC00009C34 /* ThootauPlurk WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F867268B278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit AppTests" */;
+			buildPhases = (
+				F8672662278151CC00009C34 /* Sources */,
+				F8672663278151CC00009C34 /* Frameworks */,
+				F8672664278151CC00009C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8672668278151CC00009C34 /* PBXTargetDependency */,
+			);
+			name = "ThootauPlurk WatchKit AppTests";
+			productName = "ThootauPlurk WatchKit AppTests";
+			productReference = F8672666278151CC00009C34 /* ThootauPlurk WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F867266F278151CC00009C34 /* ThootauPlurk WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F867268E278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit AppUITests" */;
+			buildPhases = (
+				F867266C278151CC00009C34 /* Sources */,
+				F867266D278151CC00009C34 /* Frameworks */,
+				F867266E278151CC00009C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8672672278151CC00009C34 /* PBXTargetDependency */,
+			);
+			name = "ThootauPlurk WatchKit AppUITests";
+			productName = "ThootauPlurk WatchKit AppUITests";
+			productReference = F8672670278151CC00009C34 /* ThootauPlurk WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8672615278151C700009C34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F867261C278151C700009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F867262C278151C900009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F867261C278151C700009C34;
+					};
+					F8672636278151C900009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F867261C278151C700009C34;
+					};
+					F8672640278151C900009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F867264B278151CA00009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F8672665278151CC00009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F867264B278151CA00009C34;
+					};
+					F867266F278151CC00009C34 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F8672640278151C900009C34;
+					};
+				};
+			};
+			buildConfigurationList = F8672618278151C700009C34 /* Build configuration list for PBXProject "ThootauPlurk" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8672614278151C700009C34;
+			productRefGroup = F867261E278151C700009C34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F867261C278151C700009C34 /* ThootauPlurk */,
+				F867262C278151C900009C34 /* ThootauPlurkTests */,
+				F8672636278151C900009C34 /* ThootauPlurkUITests */,
+				F8672640278151C900009C34 /* ThootauPlurk WatchKit App */,
+				F867264B278151CA00009C34 /* ThootauPlurk WatchKit Extension */,
+				F8672665278151CC00009C34 /* ThootauPlurk WatchKit AppTests */,
+				F867266F278151CC00009C34 /* ThootauPlurk WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F867261B278151C700009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672628278151C900009C34 /* Preview Assets.xcassets in Resources */,
+				F8672625278151C900009C34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867262B278151C900009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672635278151C900009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867263F278151C900009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672647278151CA00009C34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867264A278151CA00009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F867265F278151CC00009C34 /* Preview Assets.xcassets in Resources */,
+				F867265C278151CC00009C34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672664278151CC00009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867266E278151CC00009C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8672619278151C700009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672623278151C700009C34 /* ContentView.swift in Sources */,
+				F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672629278151C900009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672632278151C900009C34 /* ThootauPlurkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672633278151C900009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F867263E278151C900009C34 /* ThootauPlurkUITestsLaunchTests.swift in Sources */,
+				F867263C278151C900009C34 /* ThootauPlurkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672648278151CA00009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672656278151CA00009C34 /* NotificationController.swift in Sources */,
+				F8672654278151CA00009C34 /* ContentView.swift in Sources */,
+				F867265A278151CA00009C34 /* ComplicationController.swift in Sources */,
+				F8672652278151CA00009C34 /* ThootauPlurkApp.swift in Sources */,
+				F8672658278151CA00009C34 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8672662278151CC00009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F867266B278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867266C278151CC00009C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8672675278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift in Sources */,
+				F8672677278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F867262F278151C900009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F867261C278151C700009C34 /* ThootauPlurk */;
+			targetProxy = F867262E278151C900009C34 /* PBXContainerItemProxy */;
+		};
+		F8672639278151C900009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F867261C278151C700009C34 /* ThootauPlurk */;
+			targetProxy = F8672638278151C900009C34 /* PBXContainerItemProxy */;
+		};
+		F8672644278151C900009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8672640278151C900009C34 /* ThootauPlurk WatchKit App */;
+			targetProxy = F8672643278151C900009C34 /* PBXContainerItemProxy */;
+		};
+		F867264F278151CA00009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F867264B278151CA00009C34 /* ThootauPlurk WatchKit Extension */;
+			targetProxy = F867264E278151CA00009C34 /* PBXContainerItemProxy */;
+		};
+		F8672668278151CC00009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F867264B278151CA00009C34 /* ThootauPlurk WatchKit Extension */;
+			targetProxy = F8672667278151CC00009C34 /* PBXContainerItemProxy */;
+		};
+		F8672672278151CC00009C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8672640278151C900009C34 /* ThootauPlurk WatchKit App */;
+			targetProxy = F8672671278151CC00009C34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8672678278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8672679278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F867267B278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThootauPlurk WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ThootauPlurk WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F867267C278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThootauPlurk WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ThootauPlurk WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F867267F278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ThootauPlurk_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ThootauPlurk WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.thootau.ThootauPlurk;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F8672680278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ThootauPlurk_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ThootauPlurk WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.thootau.ThootauPlurk;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F8672683278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk/Preview Content\"";
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8672684278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk/Preview Content\"";
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8672686278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThootauPlurk.app/ThootauPlurk";
+			};
+			name = Debug;
+		};
+		F8672687278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThootauPlurk.app/ThootauPlurk";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8672689278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThootauPlurk;
+			};
+			name = Debug;
+		};
+		F867268A278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thootau.ThootauPlurkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThootauPlurk;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F867268C278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thootau.ThootauPlurk-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThootauPlurk WatchKit Extension.appex/ThootauPlurk WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F867268D278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thootau.ThootauPlurk-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThootauPlurk WatchKit Extension.appex/ThootauPlurk WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F867268F278151CC00009C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thootau.ThootauPlurk-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ThootauPlurk WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F8672690278151CC00009C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5M8BVFUB6V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thootau.ThootauPlurk-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ThootauPlurk WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8672618278151C700009C34 /* Build configuration list for PBXProject "ThootauPlurk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8672678278151CC00009C34 /* Debug */,
+				F8672679278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F867267A278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F867267B278151CC00009C34 /* Debug */,
+				F867267C278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F867267E278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F867267F278151CC00009C34 /* Debug */,
+				F8672680278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8672682278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8672683278151CC00009C34 /* Debug */,
+				F8672684278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8672685278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8672686278151CC00009C34 /* Debug */,
+				F8672687278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8672688278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8672689278151CC00009C34 /* Debug */,
+				F867268A278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F867268B278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F867268C278151CC00009C34 /* Debug */,
+				F867268D278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F867268E278151CC00009C34 /* Build configuration list for PBXNativeTarget "ThootauPlurk WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F867268F278151CC00009C34 /* Debug */,
+				F8672690278151CC00009C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8672615278151C700009C34 /* Project object */;
+}
