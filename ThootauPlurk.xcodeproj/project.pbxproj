@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81E53032785D7E300CDBA2D /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E53022785D7E300CDBA2D /* WatchConnector.swift */; };
 		F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672620278151C700009C34 /* ThootauPlurkApp.swift */; };
-		F8672623278151C700009C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672622278151C700009C34 /* ContentView.swift */; };
+		F8672623278151C700009C34 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672622278151C700009C34 /* NotLoginView.swift */; };
 		F8672625278151C900009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672624278151C900009C34 /* Assets.xcassets */; };
 		F8672628278151C900009C34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672627278151C900009C34 /* Preview Assets.xcassets */; };
 		F8672632278151C900009C34 /* ThootauPlurkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672631278151C900009C34 /* ThootauPlurkTests.swift */; };
@@ -18,7 +19,7 @@
 		F8672647278151CA00009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672646278151CA00009C34 /* Assets.xcassets */; };
 		F867264D278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8672652278151CA00009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672651278151CA00009C34 /* ThootauPlurkApp.swift */; };
-		F8672654278151CA00009C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672653278151CA00009C34 /* ContentView.swift */; };
+		F8672654278151CA00009C34 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672653278151CA00009C34 /* NotLoginView.swift */; };
 		F8672656278151CA00009C34 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672655278151CA00009C34 /* NotificationController.swift */; };
 		F8672658278151CA00009C34 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672657278151CA00009C34 /* NotificationView.swift */; };
 		F867265A278151CA00009C34 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672659278151CA00009C34 /* ComplicationController.swift */; };
@@ -27,6 +28,27 @@
 		F867266B278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F867266A278151CC00009C34 /* ThootauPlurk_WatchKit_AppTests.swift */; };
 		F8672675278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */; };
 		F8672677278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */; };
+		F86726932781569100009C34 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F86726922781569100009C34 /* OAuthSwift */; };
+		F8672696278156CA00009C34 /* DotEnv in Frameworks */ = {isa = PBXBuildFile; productRef = F8672695278156CA00009C34 /* DotEnv */; };
+		F86726982781726100009C34 /* PlurkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726972781726100009C34 /* PlurkLibrary.swift */; };
+		F867269B278174BC00009C34 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F867269A278174BC00009C34 /* KeychainAccess */; };
+		F867269D2781759C00009C34 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F867269C2781759C00009C34 /* .env */; };
+		F867269E2781759C00009C34 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F867269C2781759C00009C34 /* .env */; };
+		F86726A12781A62E00009C34 /* LoginedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726A02781A62E00009C34 /* LoginedView.swift */; };
+		F86726A52781A8A400009C34 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = F86726A42781A8A400009C34 /* PromiseKit */; };
+		F86726A82781A8BE00009C34 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F86726A72781A8BE00009C34 /* SwiftSoup */; };
+		F86726AB2781ACD000009C34 /* RiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AA2781ACD000009C34 /* RiverView.swift */; };
+		F86726AE2781AF7500009C34 /* PlurkPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AD2781AF7500009C34 /* PlurkPostView.swift */; };
+		F86726B22781D5F600009C34 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = F86726B12781D5F600009C34 /* WrappingStack */; };
+		F8CFF4D22785E6A9002BD16D /* PlurkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726972781726100009C34 /* PlurkLibrary.swift */; };
+		F8CFF4D32785E7D9002BD16D /* RiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AA2781ACD000009C34 /* RiverView.swift */; };
+		F8CFF4D42785E7DB002BD16D /* PlurkPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AD2781AF7500009C34 /* PlurkPostView.swift */; };
+		F8D05A282785DD41002C87BF /* PhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D05A272785DD41002C87BF /* PhoneConnector.swift */; };
+		F8D05A2B2785DD57002C87BF /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A2A2785DD57002C87BF /* KeychainAccess */; };
+		F8D05A2D2785DD5A002C87BF /* DotEnv in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A2C2785DD5A002C87BF /* DotEnv */; };
+		F8D05A2F2785DD5D002C87BF /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A2E2785DD5D002C87BF /* OAuthSwift */; };
+		F8D05A312785DD61002C87BF /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A302785DD61002C87BF /* PromiseKit */; };
+		F8D05A332785DD65002C87BF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A322785DD65002C87BF /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +122,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F81E53022785D7E300CDBA2D /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		F867261D278151C700009C34 /* ThootauPlurk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThootauPlurk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8672620278151C700009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
-		F8672622278151C700009C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8672622278151C700009C34 /* NotLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
 		F8672624278151C900009C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8672627278151C900009C34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F867262D278151C900009C34 /* ThootauPlurkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThootauPlurkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +137,7 @@
 		F8672646278151CA00009C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ThootauPlurk WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8672651278151CA00009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
-		F8672653278151CA00009C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8672653278151CA00009C34 /* NotLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
 		F8672655278151CA00009C34 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F8672657278151CA00009C34 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		F8672659278151CA00009C34 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -127,6 +150,13 @@
 		F8672670278151CC00009C34 /* ThootauPlurk WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ThootauPlurk WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F86726972781726100009C34 /* PlurkLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlurkLibrary.swift; sourceTree = "<group>"; };
+		F867269C2781759C00009C34 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		F867269F2781A52300009C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F86726A02781A62E00009C34 /* LoginedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginedView.swift; sourceTree = "<group>"; };
+		F86726AA2781ACD000009C34 /* RiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverView.swift; sourceTree = "<group>"; };
+		F86726AD2781AF7500009C34 /* PlurkPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlurkPostView.swift; sourceTree = "<group>"; };
+		F8D05A272785DD41002C87BF /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +164,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8672696278156CA00009C34 /* DotEnv in Frameworks */,
+				F86726A52781A8A400009C34 /* PromiseKit in Frameworks */,
+				F86726932781569100009C34 /* OAuthSwift in Frameworks */,
+				F86726B22781D5F600009C34 /* WrappingStack in Frameworks */,
+				F867269B278174BC00009C34 /* KeychainAccess in Frameworks */,
+				F86726A82781A8BE00009C34 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +191,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D05A2D2785DD5A002C87BF /* DotEnv in Frameworks */,
+				F8D05A312785DD61002C87BF /* PromiseKit in Frameworks */,
+				F8D05A2B2785DD57002C87BF /* KeychainAccess in Frameworks */,
+				F8D05A2F2785DD5D002C87BF /* OAuthSwift in Frameworks */,
+				F8D05A332785DD65002C87BF /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +219,7 @@
 		F8672614278151C700009C34 = {
 			isa = PBXGroup;
 			children = (
+				F867269C2781759C00009C34 /* .env */,
 				F867261F278151C700009C34 /* ThootauPlurk */,
 				F8672630278151C900009C34 /* ThootauPlurkTests */,
 				F867263A278151C900009C34 /* ThootauPlurkUITests */,
@@ -186,6 +228,7 @@
 				F8672669278151CC00009C34 /* ThootauPlurk WatchKit AppTests */,
 				F8672673278151CC00009C34 /* ThootauPlurk WatchKit AppUITests */,
 				F867261E278151C700009C34 /* Products */,
+				F8D05A292785DD57002C87BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,10 +249,16 @@
 		F867261F278151C700009C34 /* ThootauPlurk */ = {
 			isa = PBXGroup;
 			children = (
+				F86726AA2781ACD000009C34 /* RiverView.swift */,
+				F867269F2781A52300009C34 /* Info.plist */,
 				F8672620278151C700009C34 /* ThootauPlurkApp.swift */,
-				F8672622278151C700009C34 /* ContentView.swift */,
+				F8672622278151C700009C34 /* NotLoginView.swift */,
 				F8672624278151C900009C34 /* Assets.xcassets */,
 				F8672626278151C900009C34 /* Preview Content */,
+				F86726972781726100009C34 /* PlurkLibrary.swift */,
+				F86726A02781A62E00009C34 /* LoginedView.swift */,
+				F86726AD2781AF7500009C34 /* PlurkPostView.swift */,
+				F81E53022785D7E300CDBA2D /* WatchConnector.swift */,
 			);
 			path = ThootauPlurk;
 			sourceTree = "<group>";
@@ -251,7 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				F8672651278151CA00009C34 /* ThootauPlurkApp.swift */,
-				F8672653278151CA00009C34 /* ContentView.swift */,
+				F8672653278151CA00009C34 /* NotLoginView.swift */,
 				F8672655278151CA00009C34 /* NotificationController.swift */,
 				F8672657278151CA00009C34 /* NotificationView.swift */,
 				F8672659278151CA00009C34 /* ComplicationController.swift */,
@@ -259,6 +308,7 @@
 				F8672660278151CC00009C34 /* Info.plist */,
 				F8672661278151CC00009C34 /* PushNotificationPayload.apns */,
 				F867265D278151CC00009C34 /* Preview Content */,
+				F8D05A272785DD41002C87BF /* PhoneConnector.swift */,
 			);
 			path = "ThootauPlurk WatchKit Extension";
 			sourceTree = "<group>";
@@ -288,6 +338,13 @@
 			path = "ThootauPlurk WatchKit AppUITests";
 			sourceTree = "<group>";
 		};
+		F8D05A292785DD57002C87BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +363,14 @@
 				F8672644278151C900009C34 /* PBXTargetDependency */,
 			);
 			name = ThootauPlurk;
+			packageProductDependencies = (
+				F86726922781569100009C34 /* OAuthSwift */,
+				F8672695278156CA00009C34 /* DotEnv */,
+				F867269A278174BC00009C34 /* KeychainAccess */,
+				F86726A42781A8A400009C34 /* PromiseKit */,
+				F86726A72781A8BE00009C34 /* SwiftSoup */,
+				F86726B12781D5F600009C34 /* WrappingStack */,
+			);
 			productName = ThootauPlurk;
 			productReference = F867261D278151C700009C34 /* ThootauPlurk.app */;
 			productType = "com.apple.product-type.application";
@@ -376,6 +441,13 @@
 			dependencies = (
 			);
 			name = "ThootauPlurk WatchKit Extension";
+			packageProductDependencies = (
+				F8D05A2A2785DD57002C87BF /* KeychainAccess */,
+				F8D05A2C2785DD5A002C87BF /* DotEnv */,
+				F8D05A2E2785DD5D002C87BF /* OAuthSwift */,
+				F8D05A302785DD61002C87BF /* PromiseKit */,
+				F8D05A322785DD65002C87BF /* SwiftSoup */,
+			);
 			productName = "ThootauPlurk WatchKit Extension";
 			productReference = F867264C278151CA00009C34 /* ThootauPlurk WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -462,6 +534,14 @@
 				Base,
 			);
 			mainGroup = F8672614278151C700009C34;
+			packageReferences = (
+				F86726912781569100009C34 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+				F8672694278156CA00009C34 /* XCRemoteSwiftPackageReference "DotEnv" */,
+				F8672699278174BC00009C34 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				F86726A32781A8A400009C34 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				F86726A62781A8BE00009C34 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				F86726B02781D5F600009C34 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */,
+			);
 			productRefGroup = F867261E278151C700009C34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F867269D2781759C00009C34 /* .env in Resources */,
 				F8672628278151C900009C34 /* Preview Assets.xcassets in Resources */,
 				F8672625278151C900009C34 /* Assets.xcassets in Resources */,
 			);
@@ -513,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F867269E2781759C00009C34 /* .env in Resources */,
 				F867265F278151CC00009C34 /* Preview Assets.xcassets in Resources */,
 				F867265C278151CC00009C34 /* Assets.xcassets in Resources */,
 			);
@@ -539,7 +621,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8672623278151C700009C34 /* ContentView.swift in Sources */,
+				F86726982781726100009C34 /* PlurkLibrary.swift in Sources */,
+				F86726AE2781AF7500009C34 /* PlurkPostView.swift in Sources */,
+				F81E53032785D7E300CDBA2D /* WatchConnector.swift in Sources */,
+				F86726A12781A62E00009C34 /* LoginedView.swift in Sources */,
+				F86726AB2781ACD000009C34 /* RiverView.swift in Sources */,
+				F8672623278151C700009C34 /* NotLoginView.swift in Sources */,
 				F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,8 +652,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CFF4D42785E7DB002BD16D /* PlurkPostView.swift in Sources */,
+				F8CFF4D32785E7D9002BD16D /* RiverView.swift in Sources */,
+				F8CFF4D22785E6A9002BD16D /* PlurkLibrary.swift in Sources */,
 				F8672656278151CA00009C34 /* NotificationController.swift in Sources */,
-				F8672654278151CA00009C34 /* ContentView.swift in Sources */,
+				F8672654278151CA00009C34 /* NotLoginView.swift in Sources */,
+				F8D05A282785DD41002C87BF /* PhoneConnector.swift in Sources */,
 				F867265A278151CA00009C34 /* ComplicationController.swift in Sources */,
 				F8672652278151CA00009C34 /* ThootauPlurkApp.swift in Sources */,
 				F8672658278151CA00009C34 /* NotificationView.swift in Sources */,
@@ -866,6 +957,7 @@
 				DEVELOPMENT_TEAM = 5M8BVFUB6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThootauPlurk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -897,6 +989,7 @@
 				DEVELOPMENT_TEAM = 5M8BVFUB6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThootauPlurk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1160,6 +1253,115 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F86726912781569100009C34 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		F8672694278156CA00009C34 /* XCRemoteSwiftPackageReference "DotEnv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftpackages/DotEnv";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F8672699278174BC00009C34 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		F86726A32781A8A400009C34 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		F86726A62781A8BE00009C34 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		F86726B02781D5F600009C34 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F86726922781569100009C34 /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726912781569100009C34 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		F8672695278156CA00009C34 /* DotEnv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8672694278156CA00009C34 /* XCRemoteSwiftPackageReference "DotEnv" */;
+			productName = DotEnv;
+		};
+		F867269A278174BC00009C34 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8672699278174BC00009C34 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		F86726A42781A8A400009C34 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726A32781A8A400009C34 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		F86726A72781A8BE00009C34 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726A62781A8BE00009C34 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		F86726B12781D5F600009C34 /* WrappingStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726B02781D5F600009C34 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
+			productName = WrappingStack;
+		};
+		F8D05A2A2785DD57002C87BF /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8672699278174BC00009C34 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		F8D05A2C2785DD5A002C87BF /* DotEnv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8672694278156CA00009C34 /* XCRemoteSwiftPackageReference "DotEnv" */;
+			productName = DotEnv;
+		};
+		F8D05A2E2785DD5D002C87BF /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726912781569100009C34 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		F8D05A302785DD61002C87BF /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726A32781A8A400009C34 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		F8D05A322785DD65002C87BF /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86726A62781A8BE00009C34 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F8672615278151C700009C34 /* Project object */;
 }

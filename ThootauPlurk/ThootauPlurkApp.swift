@@ -6,12 +6,31 @@
 //
 
 import SwiftUI
+import OAuthSwift
 
 @main
 struct ThootauPlurkApp: App {
+    @ObservedObject var connector = WatchConnector()
+    @ObservedObject var Plurk: PlurkLibrary = PlurkLibrary()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if (!Plurk.loginSuccess) {
+                NotLoginView()
+                    .environmentObject(Plurk)
+                    .environmentObject(connector)
+                    .onOpenURL(perform: {url in
+                        OAuthSwift.handle(url: url)
+                    })
+            } else {
+                LoginedView()
+                    .environmentObject(Plurk)
+                    .environmentObject(connector)
+                    .onOpenURL(perform: {url in
+                        OAuthSwift.handle(url: url)
+                    })
+            }
+            
         }
+        
     }
 }
