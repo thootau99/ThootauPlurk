@@ -156,6 +156,7 @@
 		F86726A02781A62E00009C34 /* LoginedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginedView.swift; sourceTree = "<group>"; };
 		F86726AA2781ACD000009C34 /* RiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverView.swift; sourceTree = "<group>"; };
 		F86726AD2781AF7500009C34 /* PlurkPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlurkPostView.swift; sourceTree = "<group>"; };
+		F8CFF4D52785EAE0002BD16D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F8D05A272785DD41002C87BF /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +220,7 @@
 		F8672614278151C700009C34 = {
 			isa = PBXGroup;
 			children = (
+				F8CFF4D52785EAE0002BD16D /* README.md */,
 				F867269C2781759C00009C34 /* .env */,
 				F867261F278151C700009C34 /* ThootauPlurk */,
 				F8672630278151C900009C34 /* ThootauPlurkTests */,
