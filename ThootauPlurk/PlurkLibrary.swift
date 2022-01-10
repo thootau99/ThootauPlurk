@@ -32,7 +32,7 @@ struct PlurkPost : Codable, Hashable, Identifiable {
     var avatar_url: String?
     var contentParsed : [ParsedPost] = []
     
-    var owner_id : Int
+    var owner_id : Int?
     var user_id : Int?
     var content : String?
     var display_name: String?
@@ -66,7 +66,7 @@ struct Response: Codable, Hashable {
 }
 
 struct GetResponse: Codable {
-    var responses: [Response]
+    var responses: [PlurkPost]
     var friends: [String: PlurkUser]
 }
 
@@ -231,17 +231,20 @@ class PlurkLibrary : ObservableObject {
                                 var plurkExecuted: [PlurkPost] = []
                                 for var (index, plurk) in plurkResult.plurks.enumerated() {
                                     // なまえをだいにゅうする
-                                    plurk.display_name = plurkResult.plurk_users["\(plurk.owner_id)"]?.display_name
+                                    if let user_id = plurk.user_id {
+                                        let userIdToString = String(user_id)
+                                        if let display_name = plurkResult.plurk_users[userIdToString]?.display_name {
+                                            plurk.display_name = display_name
+                                        }
+                                    }
                                     if (plurkResult.plurk_users["\(plurk.owner_id)"]?.has_profile_image == 1 && plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar == nil) {
                                         if let user_id = plurk.user_id {
                                             plurk.avatar_url = " https://avatars.plurk.com/\(user_id)-small.gif"
                                         }
-                                        
                                     } else if (plurkResult.plurk_users["\(plurk.owner_id)"]?.has_profile_image == 1 && plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar != nil) {
                                         if let user_id = plurk.user_id, let avatar = plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar  {
                                             plurk.avatar_url = " https://avatars.plurk.com/\(user_id)-small\(avatar).gif"
                                             }
-                                        
                                     } else {
                                         plurk.avatar_url = "  https://www.plurk.com/static/default_small.jpg"
                                     }
@@ -299,9 +302,7 @@ class PlurkLibrary : ObservableObject {
                                 }
                                 plurkResult.plurks = plurkExecuted
                                 self.plurks.plurks += plurkExecuted
-                                print(self.plurks)
                                 seal.fulfill(self.plurks)
-                                print("got!")
                             } catch let DecodingError.dataCorrupted(context) {
                                 print(context)
                             } catch let DecodingError.keyNotFound(key, context) {
@@ -325,7 +326,6 @@ class PlurkLibrary : ObservableObject {
     
     func getPlurkResponses(plurk_id: Int) -> Promise<GetResponse> {
         return Promise<GetResponse> {seal in
-            var plurkResponse : GetResponse = GetResponse(responses: [], friends: [:])
 
             self._OAuthSwift.client.get("https://www.plurk.com/APP/Responses/getById", parameters: ["plurk_id": String(plurk_id)]) {(result) in
                 switch result {
@@ -334,30 +334,69 @@ class PlurkLibrary : ObservableObject {
                         do {
                             let data = response.string?.data(using: .utf8)
                             var plurkResult = try decoder.decode(GetResponse.self, from: data!)
-                            var plurkExecuted: [Response] = []
-                            
-                            
+                            var plurkExecuted: [PlurkPost] = []
                             for var plurk in plurkResult.responses {
                                 // なまえをだいにゅうする
-                                plurk.display_name = plurkResult.friends["\(plurk.user_id)"]?.display_name
+                                if let user_id = plurk.user_id {
+                                    let userIdToString = String(user_id)
+                                    if let display_name = plurkResult.friends[userIdToString]?.display_name {
+                                        plurk.display_name = display_name
+                                    }
+                                }
+                                
                                 
                                 do {
                                     let contentParsed = try SwiftSoup.parse(plurk.content ?? "")
+                                    for _element: Element in try contentParsed.body()!.getAllElements() {
+                                        switch _element.tag().toString() {
+                                        case "a":
+                                            if let url = try? _element.attr("href"), let title = try? _element.text() {
+                                                if let parsedURL = URL(string: url) {
+                                                    let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a")
+                                                    plurk.contentParsed.append(link)
+                                                }
+                                            }
+                                        case "img":
+                                            if let url = try? _element.attr("src").description, let title = try? _element.text() {
+                                                if let parsedURL = URL(string: url) {
+                                                    let image: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "img")
+                                                    plurk.contentParsed.append(image)
+                                                }
+                                            }
+                                        case "br":
+                                            let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
+                                            plurk.contentParsed.append(br)
+                                        case "span":
+                                            if let title = try? _element.text() {
+                                                let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                                                plurk.contentParsed.append(span)
+                                            }
+                                        default:
+                                            if let title = try? _element.text() {
+                                                let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                                                print(_element.tag().toString(), title)
+                                                plurk.contentParsed.append(span)
+                                            }
+                                        }
+                                    }
                                     plurk.content = try contentParsed.text()
+                                    for imageLink: Element in try contentParsed.select("img").array() {
+                                        let imageSrc: String = try imageLink.attr("src")
+                                        plurk.photos.append(imageSrc)
+                                    }
                                 }
                                 plurkExecuted.append(plurk)
                             }
                             plurkResult.responses = plurkExecuted
                             seal.fulfill(plurkResult)
                         } catch {
-                            print("ERROR IN JSON PARSING")
+                            print("error: ", error)
                         }
                     case .failure(let error):
                         print(error.localizedDescription)
                 }
             }
         }
-
     }
     
     func postPlurk(plurk_id : Int?, content: String, qualifier: String) {

@@ -22,12 +22,14 @@ struct ThootauPlurkApp: App {
                         OAuthSwift.handle(url: url)
                     })
             } else {
-                LoginedView()
-                    .environmentObject(Plurk)
-                    .environmentObject(connector)
-                    .onOpenURL(perform: {url in
-                        OAuthSwift.handle(url: url)
-                    })
+                NavigationView {
+                    LoginedView()
+                        .environmentObject(Plurk)
+                        .environmentObject(connector)
+                        .onOpenURL(perform: {url in
+                            OAuthSwift.handle(url: url)
+                        })
+                }
             }
             
         }

@@ -13,9 +13,14 @@ struct RiverView: View {
     var body: some View {
         List {
             ForEach(self.plurks.plurks, id: \.self) { _plurk in
-                PlurkPostView(post: _plurk)
-                    .padding()
-                    .overlay(Text(String(_plurk.response_count!)).offset(x: 0, y: -10), alignment: Alignment.topTrailing)
+                NavigationLink(destination:
+                                ResponseView(plurk_id: _plurk.plurk_id!, originalPost: _plurk)
+                                    .environmentObject(Plurk)
+                ) {
+                    PlurkPostView(post: _plurk)
+                        .padding()
+                        .overlay(Text(String(_plurk.response_count!)).offset(x: 0, y: -10), alignment: Alignment.topTrailing)
+                }
             }
             Button("get more plurk") {
                 Plurk.getPlurks(me: false).done { result in
@@ -23,7 +28,8 @@ struct RiverView: View {
                 }
             }.onAppear(perform: { Plurk.getPlurks(me: false).done { result in
                 self.plurks = result
-            } })
+            }
+            })
         }
     }
 }

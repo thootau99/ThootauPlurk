@@ -43,6 +43,8 @@
 		F8CFF4D22785E6A9002BD16D /* PlurkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726972781726100009C34 /* PlurkLibrary.swift */; };
 		F8CFF4D32785E7D9002BD16D /* RiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AA2781ACD000009C34 /* RiverView.swift */; };
 		F8CFF4D42785E7DB002BD16D /* PlurkPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726AD2781AF7500009C34 /* PlurkPostView.swift */; };
+		F8CFF4D7278C789C002BD16D /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFF4D6278C789C002BD16D /* ResponseView.swift */; };
+		F8CFF4D8278C789C002BD16D /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFF4D6278C789C002BD16D /* ResponseView.swift */; };
 		F8D05A282785DD41002C87BF /* PhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D05A272785DD41002C87BF /* PhoneConnector.swift */; };
 		F8D05A2B2785DD57002C87BF /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A2A2785DD57002C87BF /* KeychainAccess */; };
 		F8D05A2D2785DD5A002C87BF /* DotEnv in Frameworks */ = {isa = PBXBuildFile; productRef = F8D05A2C2785DD5A002C87BF /* DotEnv */; };
@@ -157,6 +159,7 @@
 		F86726AA2781ACD000009C34 /* RiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverView.swift; sourceTree = "<group>"; };
 		F86726AD2781AF7500009C34 /* PlurkPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlurkPostView.swift; sourceTree = "<group>"; };
 		F8CFF4D52785EAE0002BD16D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8CFF4D6278C789C002BD16D /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
 		F8D05A272785DD41002C87BF /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +264,7 @@
 				F86726A02781A62E00009C34 /* LoginedView.swift */,
 				F86726AD2781AF7500009C34 /* PlurkPostView.swift */,
 				F81E53022785D7E300CDBA2D /* WatchConnector.swift */,
+				F8CFF4D6278C789C002BD16D /* ResponseView.swift */,
 			);
 			path = ThootauPlurk;
 			sourceTree = "<group>";
@@ -630,6 +634,7 @@
 				F86726AB2781ACD000009C34 /* RiverView.swift in Sources */,
 				F8672623278151C700009C34 /* NotLoginView.swift in Sources */,
 				F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */,
+				F8CFF4D7278C789C002BD16D /* ResponseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +664,7 @@
 				F8CFF4D22785E6A9002BD16D /* PlurkLibrary.swift in Sources */,
 				F8672656278151CA00009C34 /* NotificationController.swift in Sources */,
 				F8672654278151CA00009C34 /* NotLoginView.swift in Sources */,
+				F8CFF4D8278C789C002BD16D /* ResponseView.swift in Sources */,
 				F8D05A282785DD41002C87BF /* PhoneConnector.swift in Sources */,
 				F867265A278151CA00009C34 /* ComplicationController.swift in Sources */,
 				F8672652278151CA00009C34 /* ThootauPlurkApp.swift in Sources */,

@@ -3,9 +3,6 @@ import SwiftUI
 
 struct PlurkPostView : View {
     var post : PlurkPost
-    let columns = Array(repeating: GridItem(), count: 2)
-    @State private var imageTag: String?
-    @State private var imageURL: String?
     var body: some View {
         ZStack {
             VStack(alignment: .leading ) {
