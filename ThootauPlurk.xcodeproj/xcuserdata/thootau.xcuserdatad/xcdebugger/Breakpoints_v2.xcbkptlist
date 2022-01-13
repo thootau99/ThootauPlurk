@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8CB76AB6-3FA4-4A46-96AA-566B6DC83C13"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F8A08F1-D58C-40F4-8C11-EBF1CEA91DA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/ResponseView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "531DF52A-88DB-4C61-8857-91E515A87727"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkPostView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26045CB3-1FC4-43CC-887D-1B4411F0E8B3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
+            landmarkName = "getPlurkResponses(plurk_id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "456ACD0A-A763-4F5D-80DC-CF5848E5573C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "getPlurkResponses(plurk_id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "748E5FDB-0E48-4D70-B0ED-4FFA3403FFBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "getPlurkResponses(plurk_id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCDDC7BF-0B97-4F34-8B72-62C4FAF8C54F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "getPlurkResponses(plurk_id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A765B026-6280-4C0B-ABC3-75255CD66879"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "getPlurkResponses(plurk_id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A765B026-6280-4C0B-ABC3-75255CD66879 - efcb3bd33292f7f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OAuthSwift.OAuthSwiftResponse, OAuthSwift.OAuthSwiftError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;ThootauPlurk.GetResponse&gt;) -&gt; () in ThootauPlurk.PlurkLibrary.getPlurkResponses(plurk_id: Swift.Int) -&gt; PromiseKit.Promise&lt;ThootauPlurk.GetResponse&gt;"
+                  moduleName = "ThootauPlurk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thootau/Desktop/ThootauPlurk/ThootauPlurk/PlurkLibrary.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "2000">
+               </Location>
+               <Location
+                  uuid = "A765B026-6280-4C0B-ABC3-75255CD66879 - efcb3bd33292f7f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OAuthSwift.OAuthSwiftResponse, OAuthSwift.OAuthSwiftError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;ThootauPlurk.GetResponse&gt;) -&gt; () in ThootauPlurk.PlurkLibrary.getPlurkResponses(plurk_id: Swift.Int) -&gt; PromiseKit.Promise&lt;ThootauPlurk.GetResponse&gt;"
+                  moduleName = "ThootauPlurk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thootau/Desktop/ThootauPlurk/ThootauPlurk/PlurkLibrary.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "2043">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D70DDF4-E468-4777-A59A-DD0B9192E38A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
+            landmarkName = "getPlurks(me:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3FE2425-269C-4AF6-A8CA-5E4436F2B723"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThootauPlurk/PlurkLibrary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "getPlurks(me:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3FE2425-269C-4AF6-A8CA-5E4436F2B723 - 2f7bc8f05dc8716f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OAuthSwift.OAuthSwiftResponse, OAuthSwift.OAuthSwiftError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;ThootauPlurk.GetPlurkResponse&gt;) -&gt; () in ThootauPlurk.PlurkLibrary.getPlurks(me: Swift.Bool) -&gt; PromiseKit.Promise&lt;ThootauPlurk.GetPlurkResponse&gt;"
+                  moduleName = "ThootauPlurk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thootau/Desktop/ThootauPlurk/ThootauPlurk/PlurkLibrary.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "295"
+                  endingLineNumber = "295"
+                  offsetFromSymbolStart = "13234">
+               </Location>
+               <Location
+                  uuid = "A3FE2425-269C-4AF6-A8CA-5E4436F2B723 - 2f7bc8f05dc8716f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OAuthSwift.OAuthSwiftResponse, OAuthSwift.OAuthSwiftError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;ThootauPlurk.GetPlurkResponse&gt;) -&gt; () in ThootauPlurk.PlurkLibrary.getPlurks(me: Swift.Bool) -&gt; PromiseKit.Promise&lt;ThootauPlurk.GetPlurkResponse&gt;"
+                  moduleName = "ThootauPlurk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thootau/Desktop/ThootauPlurk/ThootauPlurk/PlurkLibrary.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "295"
+                  endingLineNumber = "295"
+                  offsetFromSymbolStart = "13314">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

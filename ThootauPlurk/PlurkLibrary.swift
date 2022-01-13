@@ -214,6 +214,63 @@ class PlurkLibrary : ObservableObject {
         }
     }
     
+    func getProfilePhotoURL(hasProfile: Int?, avatar: Int?, owner_id: Int) -> String {
+        var avatar_url: String = ""
+        if (hasProfile == 1 && avatar == nil) {
+            avatar_url = "https://avatars.plurk.com/\(owner_id)-small.gif"
+        } else if (hasProfile != nil && avatar != nil) {
+            avatar_url = "https://avatars.plurk.com/\(owner_id)-small\(avatar!).gif"
+        } else {
+            avatar_url = "https://www.plurk.com/static/default_small.jpg"
+        }
+        
+        return avatar_url
+    }
+    
+    func getContenParsed(plurk: PlurkPost, content: String)  throws -> PlurkPost {
+        var copyPlurk = plurk
+        do {
+            let contentParsed = try SwiftSoup.parse(content)
+            for _element: Element in try contentParsed.body()!.getAllElements() {
+                switch _element.tag().toString() {
+                case "a":
+                    if let url = try? _element.attr("href"), let title = try? _element.text() {
+                        if let parsedURL = URL(string: url) {
+                            let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a")
+                            copyPlurk.contentParsed.append(link)
+                        }
+                    }
+                case "img":
+                    if let url = try? _element.attr("src").description, let title = try? _element.text() {
+                        if let parsedURL = URL(string: url) {
+                            let image: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "img")
+                            copyPlurk.contentParsed.append(image)
+                        }
+                    }
+                case "br":
+                    let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
+                    copyPlurk.contentParsed.append(br)
+                case "span":
+                    if let title = try? _element.text() {
+                        let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                        copyPlurk.contentParsed.append(span)
+                    }
+                default:
+                    if let title = try? _element.text() {
+                        let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                        print(_element.tag().toString(), title)
+                        copyPlurk.contentParsed.append(span)
+                    }
+                }
+            }
+            for imageLink: Element in try contentParsed.select("img").array() {
+                let imageSrc: String = try imageLink.attr("src")
+                copyPlurk.photos.append(imageSrc)
+            }
+        }
+        return copyPlurk
+    }
+    
     func getPlurks(me: Bool) -> Promise<GetPlurkResponse> {
         return Promise<GetPlurkResponse> { seal in
             var parameters = OAuthSwift.Parameters()
@@ -231,66 +288,14 @@ class PlurkLibrary : ObservableObject {
                                 var plurkExecuted: [PlurkPost] = []
                                 for var (index, plurk) in plurkResult.plurks.enumerated() {
                                     // なまえをだいにゅうする
-                                    if let user_id = plurk.user_id {
-                                        let userIdToString = String(user_id)
-                                        if let display_name = plurkResult.plurk_users[userIdToString]?.display_name {
+                                    if let owner_id = plurk.owner_id {
+                                        let ownerIdToString = String(owner_id)
+                                        if let display_name = plurkResult.plurk_users[ownerIdToString]?.display_name {
                                             plurk.display_name = display_name
                                         }
+                                        plurk.avatar_url = self.getProfilePhotoURL(hasProfile: plurkResult.plurk_users[ownerIdToString]?.has_profile_image, avatar: plurkResult.plurk_users[ownerIdToString]?.avatar, owner_id: owner_id)
                                     }
-                                    if (plurkResult.plurk_users["\(plurk.owner_id)"]?.has_profile_image == 1 && plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar == nil) {
-                                        if let user_id = plurk.user_id {
-                                            plurk.avatar_url = " https://avatars.plurk.com/\(user_id)-small.gif"
-                                        }
-                                    } else if (plurkResult.plurk_users["\(plurk.owner_id)"]?.has_profile_image == 1 && plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar != nil) {
-                                        if let user_id = plurk.user_id, let avatar = plurkResult.plurk_users["\(plurk.owner_id)"]?.avatar  {
-                                            plurk.avatar_url = " https://avatars.plurk.com/\(user_id)-small\(avatar).gif"
-                                            }
-                                    } else {
-                                        plurk.avatar_url = "  https://www.plurk.com/static/default_small.jpg"
-                                    }
-                                    
-                                    
-                                    do {
-                                        let contentParsed = try SwiftSoup.parse(plurk.content ?? "")
-                                        for _element: Element in try contentParsed.body()!.getAllElements() {
-                                            switch _element.tag().toString() {
-                                            case "a":
-                                                if let url = try? _element.attr("href"), let title = try? _element.text() {
-                                                    if let parsedURL = URL(string: url) {
-                                                        let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a")
-                                                        plurk.contentParsed.append(link)
-                                                    }
-                                                }
-                                            case "img":
-                                                if let url = try? _element.attr("src").description, let title = try? _element.text() {
-                                                    if let parsedURL = URL(string: url) {
-                                                        let image: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "img")
-                                                        plurk.contentParsed.append(image)
-                                                    }
-                                                }
-                                            case "br":
-                                                let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
-                                                plurk.contentParsed.append(br)
-                                            case "span":
-                                                if let title = try? _element.text() {
-                                                    let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                                                    plurk.contentParsed.append(span)
-                                                }
-                                            default:
-                                                if let title = try? _element.text() {
-                                                    let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                                                    print(_element.tag().toString(), title)
-                                                    plurk.contentParsed.append(span)
-                                                }
-                                            }
-                                        }
-                                        plurk.content = try contentParsed.text()
-                                        for imageLink: Element in try contentParsed.select("img").array() {
-                                            let imageSrc: String = try imageLink.attr("src")
-                                            plurk.photos.append(imageSrc)
-                                        }
-                                    }
-                                    plurkExecuted.append(plurk)
+                                    plurkExecuted.append(try self.getContenParsed(plurk: plurk, content: plurk.content ?? ""))
                                     if index == plurkResult.plurks.count - 1 {
                                         if let time = plurk.posted {
                                             let date = self.dateFormatter.date(from: time)
@@ -342,50 +347,9 @@ class PlurkLibrary : ObservableObject {
                                     if let display_name = plurkResult.friends[userIdToString]?.display_name {
                                         plurk.display_name = display_name
                                     }
+                                    plurk.avatar_url = self.getProfilePhotoURL(hasProfile: plurkResult.friends[userIdToString]?.has_profile_image, avatar: plurkResult.friends[userIdToString]?.avatar, owner_id: user_id)
                                 }
-                                
-                                
-                                do {
-                                    let contentParsed = try SwiftSoup.parse(plurk.content ?? "")
-                                    for _element: Element in try contentParsed.body()!.getAllElements() {
-                                        switch _element.tag().toString() {
-                                        case "a":
-                                            if let url = try? _element.attr("href"), let title = try? _element.text() {
-                                                if let parsedURL = URL(string: url) {
-                                                    let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a")
-                                                    plurk.contentParsed.append(link)
-                                                }
-                                            }
-                                        case "img":
-                                            if let url = try? _element.attr("src").description, let title = try? _element.text() {
-                                                if let parsedURL = URL(string: url) {
-                                                    let image: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "img")
-                                                    plurk.contentParsed.append(image)
-                                                }
-                                            }
-                                        case "br":
-                                            let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
-                                            plurk.contentParsed.append(br)
-                                        case "span":
-                                            if let title = try? _element.text() {
-                                                let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                                                plurk.contentParsed.append(span)
-                                            }
-                                        default:
-                                            if let title = try? _element.text() {
-                                                let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                                                print(_element.tag().toString(), title)
-                                                plurk.contentParsed.append(span)
-                                            }
-                                        }
-                                    }
-                                    plurk.content = try contentParsed.text()
-                                    for imageLink: Element in try contentParsed.select("img").array() {
-                                        let imageSrc: String = try imageLink.attr("src")
-                                        plurk.photos.append(imageSrc)
-                                    }
-                                }
-                                plurkExecuted.append(plurk)
+                                plurkExecuted.append(try self.getContenParsed(plurk: plurk, content: plurk.content ?? ""))
                             }
                             plurkResult.responses = plurkExecuted
                             seal.fulfill(plurkResult)
