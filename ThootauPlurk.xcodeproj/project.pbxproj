@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F81E53032785D7E300CDBA2D /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E53022785D7E300CDBA2D /* WatchConnector.swift */; };
+		F857E580279081B1009FB84F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F857E57F279081B1009FB84F /* .env */; };
+		F857E581279081B1009FB84F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F857E57F279081B1009FB84F /* .env */; };
 		F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672620278151C700009C34 /* ThootauPlurkApp.swift */; };
 		F8672623278151C700009C34 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672622278151C700009C34 /* NotLoginView.swift */; };
 		F8672625278151C900009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672624278151C900009C34 /* Assets.xcassets */; };
@@ -32,8 +34,6 @@
 		F8672696278156CA00009C34 /* DotEnv in Frameworks */ = {isa = PBXBuildFile; productRef = F8672695278156CA00009C34 /* DotEnv */; };
 		F86726982781726100009C34 /* PlurkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726972781726100009C34 /* PlurkLibrary.swift */; };
 		F867269B278174BC00009C34 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F867269A278174BC00009C34 /* KeychainAccess */; };
-		F867269D2781759C00009C34 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F867269C2781759C00009C34 /* .env */; };
-		F867269E2781759C00009C34 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F867269C2781759C00009C34 /* .env */; };
 		F86726A12781A62E00009C34 /* LoginedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86726A02781A62E00009C34 /* LoginedView.swift */; };
 		F86726A52781A8A400009C34 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = F86726A42781A8A400009C34 /* PromiseKit */; };
 		F86726A82781A8BE00009C34 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F86726A72781A8BE00009C34 /* SwiftSoup */; };
@@ -125,6 +125,7 @@
 
 /* Begin PBXFileReference section */
 		F81E53022785D7E300CDBA2D /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
+		F857E57F279081B1009FB84F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		F867261D278151C700009C34 /* ThootauPlurk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThootauPlurk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8672620278151C700009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
 		F8672622278151C700009C34 /* NotLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		F8672674278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		F8672676278151CC00009C34 /* ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurk_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F86726972781726100009C34 /* PlurkLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlurkLibrary.swift; sourceTree = "<group>"; };
-		F867269C2781759C00009C34 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		F867269F2781A52300009C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F86726A02781A62E00009C34 /* LoginedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginedView.swift; sourceTree = "<group>"; };
 		F86726AA2781ACD000009C34 /* RiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverView.swift; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		F8672614278151C700009C34 = {
 			isa = PBXGroup;
 			children = (
+				F857E57F279081B1009FB84F /* .env */,
 				F8CFF4D52785EAE0002BD16D /* README.md */,
-				F867269C2781759C00009C34 /* .env */,
 				F867261F278151C700009C34 /* ThootauPlurk */,
 				F8672630278151C900009C34 /* ThootauPlurkTests */,
 				F867263A278151C900009C34 /* ThootauPlurkUITests */,
@@ -568,7 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F867269D2781759C00009C34 /* .env in Resources */,
+				F857E580279081B1009FB84F /* .env in Resources */,
 				F8672628278151C900009C34 /* Preview Assets.xcassets in Resources */,
 				F8672625278151C900009C34 /* Assets.xcassets in Resources */,
 			);
@@ -600,7 +600,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F867269E2781759C00009C34 /* .env in Resources */,
+				F857E581279081B1009FB84F /* .env in Resources */,
 				F867265F278151CC00009C34 /* Preview Assets.xcassets in Resources */,
 				F867265C278151CC00009C34 /* Assets.xcassets in Resources */,
 			);
