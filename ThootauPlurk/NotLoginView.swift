@@ -11,16 +11,18 @@ struct NotLoginView: View {
     @EnvironmentObject var Plurk: PlurkLibrary
     @EnvironmentObject var connector: WatchConnector
     var body: some View {
-        Button("Login") {
-             Plurk.login() {
-                 var tokens : Array<Message> = []
-                 let token: Message = Message(key: "oauthToken", value: "\(self.Plurk._OAuthSwift.client.credential.oauthToken),\(self.Plurk._OAuthSwift.client.credential.oauthTokenSecret)")
-                tokens.append(token)
-                self.connector.send(messages: tokens)
-        }
-    }
-        Button("Logout") {
-             Plurk.logout()
+        VStack {
+            Button("Login") {
+                 Plurk.login() {
+                     var tokens : Array<Message> = []
+                     let token: Message = Message(key: "oauthToken", value: "\(self.Plurk._OAuthSwift.client.credential.oauthToken),\(self.Plurk._OAuthSwift.client.credential.oauthTokenSecret)")
+                    tokens.append(token)
+                    self.connector.send(messages: tokens)
+                }
+            }
+            Button("Logout") {
+                 Plurk.logout()
+            }
         }
     }
 }

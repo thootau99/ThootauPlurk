@@ -10,6 +10,8 @@
 		F81E53032785D7E300CDBA2D /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E53022785D7E300CDBA2D /* WatchConnector.swift */; };
 		F857E580279081B1009FB84F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F857E57F279081B1009FB84F /* .env */; };
 		F857E581279081B1009FB84F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F857E57F279081B1009FB84F /* .env */; };
+		F857E5832792FF37009FB84F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857E5822792FF37009FB84F /* ImageView.swift */; };
+		F857E5842792FF37009FB84F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857E5822792FF37009FB84F /* ImageView.swift */; };
 		F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672620278151C700009C34 /* ThootauPlurkApp.swift */; };
 		F8672623278151C700009C34 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8672622278151C700009C34 /* NotLoginView.swift */; };
 		F8672625278151C900009C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8672624278151C900009C34 /* Assets.xcassets */; };
@@ -126,6 +128,7 @@
 /* Begin PBXFileReference section */
 		F81E53022785D7E300CDBA2D /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		F857E57F279081B1009FB84F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		F857E5822792FF37009FB84F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		F867261D278151C700009C34 /* ThootauPlurk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThootauPlurk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8672620278151C700009C34 /* ThootauPlurkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThootauPlurkApp.swift; sourceTree = "<group>"; };
 		F8672622278151C700009C34 /* NotLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
@@ -265,6 +268,7 @@
 				F86726AD2781AF7500009C34 /* PlurkPostView.swift */,
 				F81E53022785D7E300CDBA2D /* WatchConnector.swift */,
 				F8CFF4D6278C789C002BD16D /* ResponseView.swift */,
+				F857E5822792FF37009FB84F /* ImageView.swift */,
 			);
 			path = ThootauPlurk;
 			sourceTree = "<group>";
@@ -633,6 +637,7 @@
 				F86726A12781A62E00009C34 /* LoginedView.swift in Sources */,
 				F86726AB2781ACD000009C34 /* RiverView.swift in Sources */,
 				F8672623278151C700009C34 /* NotLoginView.swift in Sources */,
+				F857E5832792FF37009FB84F /* ImageView.swift in Sources */,
 				F8672621278151C700009C34 /* ThootauPlurkApp.swift in Sources */,
 				F8CFF4D7278C789C002BD16D /* ResponseView.swift in Sources */,
 			);
@@ -663,6 +668,7 @@
 				F8CFF4D32785E7D9002BD16D /* RiverView.swift in Sources */,
 				F8CFF4D22785E6A9002BD16D /* PlurkLibrary.swift in Sources */,
 				F8672656278151CA00009C34 /* NotificationController.swift in Sources */,
+				F857E5842792FF37009FB84F /* ImageView.swift in Sources */,
 				F8672654278151CA00009C34 /* NotLoginView.swift in Sources */,
 				F8CFF4D8278C789C002BD16D /* ResponseView.swift in Sources */,
 				F8D05A282785DD41002C87BF /* PhoneConnector.swift in Sources */,

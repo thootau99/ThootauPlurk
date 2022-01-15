@@ -3,6 +3,10 @@ import SwiftUI
 
 struct PlurkPostView : View {
     var post : PlurkPost
+    @State private var imageTag: String?
+    @State private var imageURL: String? = ""
+    @EnvironmentObject var Plurk: PlurkLibrary
+
     var body: some View {
         ZStack {
             VStack(alignment: .leading ) {
@@ -35,7 +39,9 @@ struct PlurkPostView : View {
                         switch content.tag {
                         case "a":
                             if let url = content.url, let title = content.content {
-                                Link(title, destination: url)
+//                                Link(title, destination: url)
+//                                    .onTapGesture(perform: {})
+                                  Text(title)
                             }
                         case "span":
                             if let content = content.content {
@@ -54,7 +60,9 @@ struct PlurkPostView : View {
                                             .resizable()
                                             .scaledToFill()
                                             .onTapGesture {
-                                                print("touching \(url)")
+                                                self.imageURL = url.absoluteString.replacingOccurrences(of: "mx_", with: "")
+                                                self.imageTag = "\(post.plurk_id)_photo"
+                                                print("touching \(self.imageURL)")
                                             }
                                         
                                     case .failure(_):
@@ -72,7 +80,18 @@ struct PlurkPostView : View {
                             Text(content.content ?? "")
                         }
                     }
-                 
+                NavigationLink(destination:
+                                ResponseView(plurk_id: post.plurk_id!, originalPost: post)
+                                    .environmentObject(Plurk)
+                ) {
+                    EmptyView()
+                }.opacity(0)
+                NavigationLink(tag: "\(String(describing: post.plurk_id))_photo", selection: $imageTag) {
+                    ImageView(imageURL: URL(string: imageURL ?? ""))
+                                                   } label: {
+                                                       EmptyView()
+                                                   }
+                                                   .hidden()
             }
 //            NavigationLink(destination: {
 //                PlurkDetailView(plurk_id: post.plurk_id ?? 0).environmentObject(plurk) }) {
