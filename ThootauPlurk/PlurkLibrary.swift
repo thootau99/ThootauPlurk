@@ -23,12 +23,13 @@ struct ParsedPost: Codable, Hashable {
     var url: URL?
     var content: String?
     var tag: String?
+    var thumbnails: String?
 }
 
 struct PlurkPost : Codable, Hashable, Identifiable {
     
     let id: UUID = UUID()
-    var photos: [String] = []
+    var photos: [URL] = []
     var avatar_url: String?
     var contentParsed : [ParsedPost] = []
     
@@ -128,6 +129,7 @@ class PlurkLibrary : ObservableObject {
         }
     }
     
+    
     func testToken(fail: @escaping (Bool) -> ()) {
         let _ = _OAuthSwift.client.get("https://www.plurk.com/APP/Profile/getOwnProfile") {(result) in
             switch result {
@@ -139,57 +141,55 @@ class PlurkLibrary : ObservableObject {
         }
     }
     
-    func login(completion: @escaping () -> ()) {
-        let keychain = Keychain(service: "org.thootau.plurkwatch")
-        guard let token = try? keychain.get("oauthToken"),
-              let tokenSecret = try? keychain.get("oauthTokenSecret") else {
-              _OAuthSwift.authorize(
-                withCallbackURL: "thootau-plurk://oauth-callback/plurk") { result in
-                    switch result {
-                    case .success(let (credential, _, _)):
-                        self.loginSuccess = true
-                        self._OAuthSwift.client.credential.oauthToken = credential.oauthToken
-                        self._OAuthSwift.client.credential.oauthTokenSecret = credential.oauthTokenSecret
-                        keychain["oauthToken"] = credential.oauthToken as String
-                        keychain["oauthTokenSecret"] = credential.oauthTokenSecret as String
-                        self.loginSuccess = true
-                        _ = completion()
-                        
-                        
-                    case .failure(let error):
-                      print(error.localizedDescription)
+    func login() -> Promise<Bool> {
+        return Promise<Bool> {seal in
+            let keychain = Keychain(service: "org.thootau.plurkwatch")
+            guard let token = try? keychain.get("oauthToken"),
+                  let tokenSecret = try? keychain.get("oauthTokenSecret") else {
+                  _OAuthSwift.authorize(
+                    withCallbackURL: "thootau-plurk://oauth-callback/plurk") { result in
+                        switch result {
+                        case .success(let (credential, _, _)):
+                            self.loginSuccess = true
+                            self._OAuthSwift.client.credential.oauthToken = credential.oauthToken
+                            self._OAuthSwift.client.credential.oauthTokenSecret = credential.oauthTokenSecret
+                            keychain["oauthToken"] = credential.oauthToken as String
+                            keychain["oauthTokenSecret"] = credential.oauthTokenSecret as String
+                            self.loginSuccess = true
+                            return seal.fulfill(true)
+                        case .failure(let error):
+                          print(error.localizedDescription)
+                        }
                     }
-                }
-            return
-        }
-        self._OAuthSwift.client.credential.oauthToken = token
-        self._OAuthSwift.client.credential.oauthTokenSecret = tokenSecret
-        testToken() { fail in
-            if fail {
-                self._OAuthSwift.client.credential.oauthToken = ""
-                self._OAuthSwift.client.credential.oauthTokenSecret = ""
-                keychain["oauthToken"] = ""
-                keychain["oauthTokenSecret"] = ""
-                self._OAuthSwift.authorize(
-                  withCallbackURL: "thootau-plurk://oauth-callback/plurk") { result in
-                      switch result {
-                      case .success(let (credential, _, _)):
-                          self.loginSuccess = true
-                          self._OAuthSwift.client.credential.oauthToken = credential.oauthToken
-                          self._OAuthSwift.client.credential.oauthTokenSecret = credential.oauthTokenSecret
-                          keychain["oauthToken"] = credential.oauthToken as String
-                          keychain["oauthTokenSecret"] = credential.oauthTokenSecret as String
-                          self.loginSuccess = true
-                          _ = completion()
-                          
-                          
-                      case .failure(let error):
-                        print(error.localizedDescription)
+                return
+            }
+            self._OAuthSwift.client.credential.oauthToken = token
+            self._OAuthSwift.client.credential.oauthTokenSecret = tokenSecret
+            testToken() { fail in
+                if fail {
+                    self._OAuthSwift.client.credential.oauthToken = ""
+                    self._OAuthSwift.client.credential.oauthTokenSecret = ""
+                    keychain["oauthToken"] = ""
+                    keychain["oauthTokenSecret"] = ""
+                    self._OAuthSwift.authorize(
+                      withCallbackURL: "thootau-plurk://oauth-callback/plurk") { result in
+                          switch result {
+                          case .success(let (credential, _, _)):
+                              self.loginSuccess = true
+                              self._OAuthSwift.client.credential.oauthToken = credential.oauthToken
+                              self._OAuthSwift.client.credential.oauthTokenSecret = credential.oauthTokenSecret
+                              keychain["oauthToken"] = credential.oauthToken as String
+                              keychain["oauthTokenSecret"] = credential.oauthTokenSecret as String
+                              self.loginSuccess = true
+                              return seal.fulfill(true)
+                          case .failure(let error):
+                            print(error.localizedDescription)
+                          }
                       }
-                  }
-            } else {
-                self.loginSuccess = true
-                _ = completion()
+                } else {
+                    self.loginSuccess = true
+                    return seal.fulfill(true)
+                }
             }
         }
     }
@@ -230,21 +230,31 @@ class PlurkLibrary : ObservableObject {
     func getContenParsed(plurk: PlurkPost, content: String)  throws -> PlurkPost {
         var copyPlurk = plurk
         do {
-            let contentParsed = try SwiftSoup.parse(content)
+            let contentParsed = try SwiftSoup.parseBodyFragment(content)
             for _element: Element in try contentParsed.body()!.getAllElements() {
                 switch _element.tag().toString() {
                 case "a":
-                    if let url = try? _element.attr("href"), let title = try? _element.text() {
-                        if let parsedURL = URL(string: url) {
-                            let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a")
-                            copyPlurk.contentParsed.append(link)
+                    if _element.childNodeSize() > 0 {
+                        if let url = try? _element.attr("href"), let title = try? _element.text() {
+                            if title.isEmpty {
+                                break
+                            }
+                            if let parsedURL = URL(string: url) {
+                                for child: Element in _element.children() {
+                                    if child.tag().toString() == "img" {
+                                        if let imageURL = try? child.attr("src").description {
+                                                let link: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "a", thumbnails: imageURL)
+                                                copyPlurk.contentParsed.append(link)
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 case "img":
-                    if let url = try? _element.attr("src").description, let title = try? _element.text() {
+                    if let url = try? _element.attr("src").description {
                         if let parsedURL = URL(string: url) {
-                            let image: ParsedPost = ParsedPost(url: parsedURL, content: title, tag: "img")
-                            copyPlurk.contentParsed.append(image)
+                            copyPlurk.photos.append(parsedURL)
                         }
                     }
                 case "br":
@@ -262,10 +272,6 @@ class PlurkLibrary : ObservableObject {
                         copyPlurk.contentParsed.append(span)
                     }
                 }
-            }
-            for imageLink: Element in try contentParsed.select("img").array() {
-                let imageSrc: String = try imageLink.attr("src")
-                copyPlurk.photos.append(imageSrc)
             }
         }
         return copyPlurk

@@ -38,11 +38,7 @@ struct PlurkPostView : View {
                     ForEach(post.contentParsed, id: \.self) { content in
                         switch content.tag {
                         case "a":
-                            if let url = content.url, let title = content.content {
-//                                Link(title, destination: url)
-//                                    .onTapGesture(perform: {})
-                                  Text(title)
-                            }
+                            LinkView(post: content)
                         case "span":
                             if let content = content.content {
                                 Text(content)
@@ -80,32 +76,44 @@ struct PlurkPostView : View {
                             Text(content.content ?? "")
                         }
                     }
+                ForEach(post.photos, id: \.self) { photoURL in
+                    AsyncImage(url: photoURL) {phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .onTapGesture {
+                                    self.imageURL = photoURL.absoluteString.replacingOccurrences(of: "mx_", with: "")
+                                    self.imageTag = "\(photoURL)_photo"
+                                    print("touching \(self.imageURL)")
+                                    print(self.imageTag)
+                                }
+                        case .failure(_):
+                            Image(systemName: "exclamationmark.icloud")
+                                .resizable()
+                                .scaledToFit()
+                                .aspectRatio(0.90, contentMode: .fill)
+                        @unknown default:
+                            Image(systemName: "exclamationmark.icloud")
+                        }
+                    }
+                }
                 NavigationLink(destination:
                                 ResponseView(plurk_id: post.plurk_id!, originalPost: post)
                                     .environmentObject(Plurk)
                 ) {
                     EmptyView()
                 }.opacity(0)
-                NavigationLink(tag: "\(String(describing: post.plurk_id))_photo", selection: $imageTag) {
-                    ImageView(imageURL: URL(string: imageURL ?? ""))
+                NavigationLink(tag: "\(String(describing: post.plurk_id))_photo", selection: self.$imageTag) {
+                    ImageView(imageURL: URL(string: self.imageURL ?? ""))
                                                    } label: {
                                                        EmptyView()
                                                    }
                                                    .hidden()
             }
-//            NavigationLink(destination: {
-//                PlurkDetailView(plurk_id: post.plurk_id ?? 0).environmentObject(plurk) }) {
-//                    EmptyView()
-//                }.opacity(0)
-//            NavigationLink(tag: "\(post.plurk_id)_photo", selection: $imageTag) {
-//                ImageView(imageURL: imageURL ?? "")
-//                                   } label: {
-//                                       EmptyView()
-//                                   }
-//                                   .hidden()
-            
         }
-
     }
-    
 }

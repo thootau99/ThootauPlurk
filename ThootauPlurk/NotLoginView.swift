@@ -13,11 +13,13 @@ struct NotLoginView: View {
     var body: some View {
         VStack {
             Button("Login") {
-                 Plurk.login() {
-                     var tokens : Array<Message> = []
-                     let token: Message = Message(key: "oauthToken", value: "\(self.Plurk._OAuthSwift.client.credential.oauthToken),\(self.Plurk._OAuthSwift.client.credential.oauthTokenSecret)")
-                    tokens.append(token)
-                    self.connector.send(messages: tokens)
+                Plurk.login().done { result in
+                    if (result) {
+                        var tokens : Array<Message> = []
+                        let token: Message = Message(key: "oauthToken", value: "\(self.Plurk._OAuthSwift.client.credential.oauthToken),\(self.Plurk._OAuthSwift.client.credential.oauthTokenSecret)")
+                       tokens.append(token)
+                       self.connector.send(messages: tokens)
+                    }
                 }
             }
             Button("Logout") {
