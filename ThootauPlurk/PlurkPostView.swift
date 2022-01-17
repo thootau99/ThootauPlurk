@@ -34,7 +34,7 @@ struct PlurkPostView : View {
                     }
                     .frame(minWidth: 24, maxWidth: 24, minHeight: 24, maxHeight: 24, alignment: .leading)
                 })
-                    
+                VStack(alignment: HorizontalAlignment.leading) {
                     ForEach(post.contentParsed, id: \.self) { content in
                         switch content.tag {
                         case "a":
@@ -42,9 +42,11 @@ struct PlurkPostView : View {
                         case "span":
                             if let content = content.content {
                                 Text(content)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                         case "br":
                             Text("\n")
+                                .fixedSize(horizontal: false, vertical: true)
                         case "img":
                             if let url = content.url {
                                 AsyncImage(url: url) {phase in
@@ -55,6 +57,7 @@ struct PlurkPostView : View {
                                         image
                                             .resizable()
                                             .scaledToFill()
+                                            .fixedSize(horizontal: false, vertical: true)
                                             .onTapGesture {
                                                 self.imageURL = url.absoluteString.replacingOccurrences(of: "mx_", with: "")
                                                 self.imageTag = "\(post.plurk_id)_photo"
@@ -74,30 +77,7 @@ struct PlurkPostView : View {
                             }
                         default:
                             Text(content.content ?? "")
-                        }
-                    }
-                ForEach(post.photos, id: \.self) { photoURL in
-                    AsyncImage(url: photoURL) {phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .onTapGesture {
-                                    self.imageURL = photoURL.absoluteString.replacingOccurrences(of: "mx_", with: "")
-                                    self.imageTag = "\(photoURL)_photo"
-                                    print("touching \(self.imageURL)")
-                                    print(self.imageTag)
-                                }
-                        case .failure(_):
-                            Image(systemName: "exclamationmark.icloud")
-                                .resizable()
-                                .scaledToFit()
-                                .aspectRatio(0.90, contentMode: .fill)
-                        @unknown default:
-                            Image(systemName: "exclamationmark.icloud")
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                 }
