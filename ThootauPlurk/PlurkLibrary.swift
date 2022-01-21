@@ -381,28 +381,32 @@ class PlurkLibrary : ObservableObject {
         }
     }
     
-    func postPlurk(plurk_id : Int?, content: String, qualifier: String) {
-        guard let checkPlurkId : Int = plurk_id else {
-            let _ = self._OAuthSwift.client.post("https://www.plurk.com/APP/Timeline/plurkAdd", parameters: ["content": content, "qualifier": qualifier]) {result in
+    func postPlurk(plurk_id : Int?, content: String, qualifier: String) -> Promise<Bool> {
+        return Promise<Bool> { seal in
+            guard let checkPlurkId : Int = plurk_id else {
+                let _ = self._OAuthSwift.client.post("https://www.plurk.com/APP/Timeline/plurkAdd", parameters: ["content": content, "qualifier": qualifier]) {result in
+                    switch result {
+                    case .success(_):
+                            seal.fulfill(true)
+
+                        case .failure(let error):
+                            seal.reject(error)
+                    }
+                }
+                return
+            }
+            let _ = self._OAuthSwift.client.post("https://www.plurk.com/APP/Responses/responseAdd", parameters: ["plurk_id": checkPlurkId, "content": content, "qualifier": qualifier]) {result in
+                
                 switch result {
-                    case .success(let response):
-                        print(response.string as Any)
+                    case .success(_):
+                        seal.fulfill(true)
+
                     case .failure(let error):
-                        print(error.localizedDescription)
+                        seal.reject(error)
                 }
             }
-            return
         }
-        let _ = self._OAuthSwift.client.post("https://www.plurk.com/APP/Responses/responseAdd", parameters: ["plurk_id": checkPlurkId, "content": content, "qualifier": qualifier]) {result in
-            
-            switch result {
-                case .success(let response):
-                    print(response.string as Any)
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        }
+        
     }
     func logout() {
         let keychain = Keychain(service: "org.thootau.plurkwatch")

@@ -18,11 +18,12 @@ struct LoginedView: View {
                     Text("Plurks")
                 }
                 .environmentObject(Plurk)
-            Text("New Plurk")
+            NewPlurkView()
                 .tabItem {
                     Image(systemName: "pencil.circle")
                     Text("New Plurk")
                 }
+                .environmentObject(Plurk)
             Text("Personal")
                 .tabItem {
                     Image(systemName: "person.fill")
