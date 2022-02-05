@@ -71,6 +71,10 @@ struct GetResponse: Codable {
     var friends: [String: PlurkUser]
 }
 
+struct GetChannelResponse: Codable {
+    var comet_server: String
+}
+
 class PlurkLibrary : ObservableObject {
     @Published var loginSuccess = false
     @Published var lastPlurkTime: String = ""
@@ -115,6 +119,14 @@ class PlurkLibrary : ObservableObject {
                     keychain["oauthTokenSecret"] = ""
                 } else {
                     self.loginSuccess = true
+                    self.getUserChannel().done {url in
+                        let channelQueue = DispatchQueue.global()
+                        channelQueue.async {
+                            
+                            let longPull:LongPullRequest = LongPullRequest()
+                            longPull.pull(execute_url: url)
+                        }
+                    }
                 }
             }
         } else {
@@ -193,6 +205,30 @@ class PlurkLibrary : ObservableObject {
             }
         }
     }
+    
+    func getUserChannel() -> Promise<URL> {
+        return Promise<URL> { seal in
+            let requestURL = "https://www.plurk.com/APP/Realtime/getUserChannel"
+            let _ = _OAuthSwift.client.get(requestURL) {(result) in
+                switch result {
+                    case .success(let response):
+                        let decoder = JSONDecoder()
+                        do {
+                            let data = response.string?.data(using: .utf8)
+                            let channelResult = try decoder.decode(GetChannelResponse.self, from: data!)
+                            if let channelURL = URL(string: channelResult.comet_server) {
+                                seal.fulfill(channelURL)
+                            }
+                        } catch {
+                            print("ERROR IN JSON PARSING")
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     func getProfile(me: Bool, user_id: String) -> Promise<ProfileResponse> {
         return Promise<ProfileResponse> { seal in
             let requestURL = me ? "https://www.plurk.com/APP/Profile/getOwnProfile": "https://www.plurk.com/APP/Profile/getPublicProfile?user_id=\(user_id)"

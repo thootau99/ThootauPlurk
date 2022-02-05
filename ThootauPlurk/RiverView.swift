@@ -26,6 +26,7 @@ struct RiverView: View {
                 self.plurks = result
             }
             })
+            
         }
     }
 }

@@ -31,8 +31,6 @@ struct ThootauPlurkApp: App {
                         })
                 }
             }
-            
         }
-        
     }
 }
