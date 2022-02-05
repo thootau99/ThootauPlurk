@@ -258,24 +258,33 @@ class PlurkLibrary : ObservableObject {
                             copyPlurk.contentParsed.append(img)
                         }
                     }
-                case "br":
-                    let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
-                    copyPlurk.contentParsed.append(br)
+//                case "br":
+//                    let br: ParsedPost = ParsedPost(url: nil, content: nil, tag: "br")
+//                    copyPlurk.contentParsed.append(br)
                 case "span":
                     if let title = try? _element.text() {
-                        let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                        copyPlurk.contentParsed.append(span)
+                        if " " != title {
+                            let span: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                            copyPlurk.contentParsed.append(span)
+                        } else {
+                            print(title, "conent is null")
+                        }
                     }
                 case "body":
                     if let title = try? _element.text() {
-                        let body: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
-                        if _element.childNodeSize() == 1 {
-                            copyPlurk.contentParsed.append(body)
-                        } else {
-                            for textNode in _element.textNodes() {
-                                let _text = try? textNode.text()
-                                let text: ParsedPost = ParsedPost(url: nil, content: _text, tag: "span")
-                                copyPlurk.contentParsed.append(text)
+                        if " " != title {
+                            let body: ParsedPost = ParsedPost(url: nil, content: title, tag: "span")
+                            if _element.childNodeSize() == 1 {
+                                copyPlurk.contentParsed.append(body)
+                            } else {
+                                for textNode in _element.textNodes() {
+                                    let _text = try? textNode.text()
+                                    if " " != _text {
+                                        let text: ParsedPost = ParsedPost(url: nil, content: _text, tag: "span")
+                                        copyPlurk.contentParsed.append(text)
+                                    }
+                                    
+                                }
                             }
                         }
                     }

@@ -95,5 +95,6 @@ struct PlurkPostView : View {
                                                    .hidden()
             }
         }
+        .frame(maxWidth: .infinity)
     }
 }
