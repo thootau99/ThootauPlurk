@@ -135,6 +135,7 @@
 		F81E53022785D7E300CDBA2D /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		F8513BD6279AF78000675E12 /* NewPlurkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlurkView.swift; sourceTree = "<group>"; };
 		F8513BD927AEDCC200675E12 /* LongPollingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPollingRequest.swift; sourceTree = "<group>"; };
+		F8513BE127AF6BC800675E12 /* ThootauPlurk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThootauPlurk.entitlements; sourceTree = "<group>"; };
 		F857E57F279081B1009FB84F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		F857E5822792FF37009FB84F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		F857E58527946CE9009FB84F /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 		F867261F278151C700009C34 /* ThootauPlurk */ = {
 			isa = PBXGroup;
 			children = (
+				F8513BE127AF6BC800675E12 /* ThootauPlurk.entitlements */,
 				F86726AA2781ACD000009C34 /* RiverView.swift */,
 				F867269F2781A52300009C34 /* Info.plist */,
 				F8672620278151C700009C34 /* ThootauPlurkApp.swift */,
@@ -983,6 +985,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThootauPlurk/ThootauPlurk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk/Preview Content\"";
@@ -1015,6 +1018,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThootauPlurk/ThootauPlurk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ThootauPlurk/Preview Content\"";

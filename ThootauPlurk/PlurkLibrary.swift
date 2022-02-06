@@ -77,6 +77,7 @@ struct GetChannelResponse: Codable {
 
 class PlurkLibrary : ObservableObject {
     @Published var loginSuccess = false
+    @Published var userChannelURL: URL? = nil
     @Published var lastPlurkTime: String = ""
     @Published var plurks: GetPlurkResponse = GetPlurkResponse(plurks: [], plurk_users: [:])
     let dateFormatter = DateFormatter()
@@ -119,14 +120,9 @@ class PlurkLibrary : ObservableObject {
                     keychain["oauthTokenSecret"] = ""
                 } else {
                     self.loginSuccess = true
-                    self.getUserChannel().done {url in
-                        let channelQueue = DispatchQueue.global()
-                        channelQueue.async {
-                            
-                            let longPull:LongPullRequest = LongPullRequest()
-                            longPull.pull(execute_url: url)
-                        }
-                    }
+                    
+                    self.setChannel()
+                    
                 }
             }
         } else {
@@ -227,6 +223,23 @@ class PlurkLibrary : ObservableObject {
                 }
             }
         }
+    }
+    
+    func setChannel() {
+        if self.userChannelURL == nil {
+            self.getUserChannel().done { url in
+                self.userChannelURL = url
+            }
+        }
+        
+        let channelQueue = DispatchQueue.global()
+        channelQueue.async {
+            let userChannel:UserChannelRequest = UserChannelRequest()
+            if let userChannelURL = self.userChannelURL {
+                userChannel.start(execute_url: userChannelURL)
+            }
+        }
+        
     }
     
     func getProfile(me: Bool, user_id: String) -> Promise<ProfileResponse> {
