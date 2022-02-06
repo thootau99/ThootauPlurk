@@ -213,6 +213,7 @@ class PlurkLibrary : ObservableObject {
                             let data = response.string?.data(using: .utf8)
                             let channelResult = try decoder.decode(GetChannelResponse.self, from: data!)
                             if let channelURL = URL(string: channelResult.comet_server) {
+                                self.userChannelURL = channelURL
                                 seal.fulfill(channelURL)
                             }
                         } catch {
@@ -227,9 +228,7 @@ class PlurkLibrary : ObservableObject {
     
     func setChannel() {
         if self.userChannelURL == nil {
-            self.getUserChannel().done { url in
-                self.userChannelURL = url
-            }
+            self.getUserChannel()
         }
         
         let channelQueue = DispatchQueue.global()

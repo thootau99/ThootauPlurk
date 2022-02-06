@@ -16,7 +16,7 @@ struct ThootauPlurkApp: App {
     @ObservedObject var connector = WatchConnector()
     @ObservedObject var Plurk: PlurkLibrary = PlurkLibrary()
     
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     var body: some Scene {
         WindowGroup {
             if (!Plurk.loginSuccess) {
@@ -49,14 +49,28 @@ struct ThootauPlurkApp: App {
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
             case .background:
+                let request = BGProcessingTaskRequest(identifier: "com.ThootauPlurk.refresh")
+                    // 通信が発生するか否かを指定
+                    request.requiresNetworkConnectivity = false
+                    // CPU監視の必要可否を設定
+                    request.requiresExternalPower = true
+
+                    do {
+                        // スケジューラーに実行リクエストを登録
+                        try BGTaskScheduler.shared.submit(request)
+                    } catch {
+                        print("Could not schedule app processing: \(error)")
+                    }
+
                 print("in background")
             case .active:
+                self.Plurk.getUserChannel().done {url in
+                    appDelegate.channelURL = url
+                }
                 print("active")
             case .inactive:
                 print("inactive")
             }
-        
-            
         }
     }
 }

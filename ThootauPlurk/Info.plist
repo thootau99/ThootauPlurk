@@ -5,7 +5,7 @@
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
 		<string>com.ThootauPlurk.fetch</string>
-		<string>com.ThootauPlurk.refersh</string>
+		<string>com.ThootauPlurk.refresh</string>
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
